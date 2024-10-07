@@ -62,4 +62,25 @@ public class Swerve extends SwerveDrivetrain {
     public Command zeroGyroCommand(){
         return Commands.runOnce(() -> m_pigeon2.reset());
     }
+
+    public double getPitch(){
+        return m_pigeon2.getPitch().getValueAsDouble();
+    }
+
+    public void targetAngleDrive(Translation2d targetAngle, double forward, double strafe){
+        setControl((new SwerveRequest.FieldCentricFacingAngle().withCenterOfRotation(targetAngle).withVelocityX(forward).withVelocityY(strafe)));
+    }
+
+    public void targetAngleDrive(Rotation2d targetAngle, double forward, double strafe){
+        setControl((new SwerveRequest.FieldCentricFacingAngle().withTargetDirection(targetAngle).withVelocityX(forward).withVelocityY(strafe)));
+    }
+
+    public void addVisionMeasurement(Pose2d pose2d, double timestamp){
+        m_odometry.addVisionMeasurement(pose2d, timestamp);
+    }
+
+    public void setPigeonOffset(){
+        m_pigeon2.getConfigurator().apply((new MountPoseConfigs()).withMountPosePitch(47.109375).withMountPoseRoll(-88.242188).withMountPoseYaw(-83.410950))
+    }
+
 }
