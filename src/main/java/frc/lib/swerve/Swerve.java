@@ -80,7 +80,7 @@ public class Swerve extends SwerveDrivetrain {
     }
 
     public void setPigeonOffset(){
-        m_pigeon2.getConfigurator().apply((new MountPoseConfigs()).withMountPosePitch(47.109375).withMountPoseRoll(-88.242188).withMountPoseYaw(-83.410950))
+        m_pigeon2.getConfigurator().apply((new MountPoseConfigs()).withMountPosePitch(47.109375).withMountPoseRoll(-88.242188).withMountPoseYaw(-83.410950));
     }
 
 }
