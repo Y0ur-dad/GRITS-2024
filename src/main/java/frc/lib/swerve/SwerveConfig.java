@@ -1,4 +1,4 @@
-/*package frc.lib.swerve;
+package frc.lib.swerve;
 
 import com.ctre.phoenix6.configs.Slot0Configs;
 import com.ctre.phoenix6.mechanisms.swerve.SwerveDrivetrainConstants;
@@ -86,4 +86,4 @@ public class SwerveConfig {
     return new ChassisSpeeds(driverControls.driveForward(), driverControls.driveStrafe(),
             driverControls.driveRotation());
   }
-}*/
+}
