@@ -183,5 +183,11 @@ public final class Constants{
     public static final PathConstraints pathConstraints = new PathConstraints(maxVelocityMPS, maxModuleAccelerationMPSSq, maxAngularVelocityRPS, maxAngularAccelerationRPSSq);
   }
 
+  public static final class DriverConstants{
+    public static final double stickDeadband = 0.2;
+    public static final int driverPort = 0;
+    public static final int operatorPort = 1;
+  }
+
   
 }
